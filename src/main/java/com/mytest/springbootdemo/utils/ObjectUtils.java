@@ -18,7 +18,7 @@ public class ObjectUtils {
 
   private static Map<String, BeanCopier> BEAN_COPIER_MAP = Maps.newHashMap();
 
-  public static  <T> T  copyProperties(Object source, Object target) {
+  public static <T> T copyProperties(Object source, Object target) {
     String     beanKey = generateKey(source.getClass(), target.getClass());
     BeanCopier copier  = null;
     if (!BEAN_COPIER_MAP.containsKey(beanKey)) {
@@ -31,9 +31,9 @@ public class ObjectUtils {
     return (T) target;
   }
 
-  public static  <T> T  copyProperties(Object source, Class<T> target) {
+  public static <T> T copyProperties(Object source, Class<T> target) {
     T t = BeanUtils.instantiate(target);
-    copyProperties(source,t);
+    copyProperties(source, t);
     return t;
   }
 

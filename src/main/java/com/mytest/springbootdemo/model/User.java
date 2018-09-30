@@ -15,16 +15,17 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 @Setter
 @Getter
 public class User implements Serializable {
-    private Long userId;
 
-    private String userName;
+  private Long userId;
 
-    private String password;
+  private String userName;
 
-    private String phone;
+  private String password;
 
-    @Override
-    public String toString() {
-        return ReflectionToStringBuilder.toString(this, ToStringStyle.SHORT_PREFIX_STYLE);
-    }
+  private String phone;
+
+  @Override
+  public String toString() {
+    return ReflectionToStringBuilder.toString(this, ToStringStyle.SHORT_PREFIX_STYLE);
+  }
 }

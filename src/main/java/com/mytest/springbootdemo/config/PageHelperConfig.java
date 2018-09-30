@@ -16,8 +16,6 @@ public class PageHelperConfig {
 
   /**
    * 注入pagehelper配置
-   *
-   * @return
    */
   @Bean
   public PageHelper getPageHelper() {

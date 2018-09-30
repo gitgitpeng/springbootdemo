@@ -1,4 +1,5 @@
 package com.mytest.springbootdemo.service.impl;
+
 import com.google.common.collect.Lists;
 
 import com.github.pagehelper.Page;
@@ -57,12 +58,12 @@ public class UserServiceImpl implements UserService {
 
   @Override
   public PageData<User> queryList() {
-    PageHelper.startPage(2,10);
+    PageHelper.startPage(2, 10);
     Page<User>     page     = userMapper.queryList();
     PageData<User> pageData = new PageData<>();
     pageData.setPageSize(page.getPageSize());
     pageData.setPageNum(page.getPageNum());
-    pageData.setTotalSize((int)page.getTotal());
+    pageData.setTotalSize((int) page.getTotal());
     pageData.setTotalPage(page.getPages());
     pageData.setData(page.getResult());
     return pageData;

@@ -11,17 +11,18 @@ import org.springframework.stereotype.Component;
  * @version $: UserMapper.java, v 0.1 2018年09月30日 11:01 xie.huanpeng Exp $
  */
 public interface UserMapper {
-    int deleteByPrimaryKey(Long userId);
 
-    int insert(User record);
+  int deleteByPrimaryKey(Long userId);
 
-    int insertSelective(User record);
+  int insert(User record);
 
-    User selectByPrimaryKey(Long userId);
+  int insertSelective(User record);
 
-    int updateByPrimaryKeySelective(User record);
+  User selectByPrimaryKey(Long userId);
 
-    int updateByPrimaryKey(User record);
+  int updateByPrimaryKeySelective(User record);
 
-    Page<User> queryList();
+  int updateByPrimaryKey(User record);
+
+  Page<User> queryList();
 }

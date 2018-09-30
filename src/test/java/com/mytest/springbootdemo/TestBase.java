@@ -11,7 +11,7 @@ import org.junit.Test;
 public class TestBase {
 
   @Test
-  public void test(){
+  public void test() {
     System.out.println("111");
   }
 }

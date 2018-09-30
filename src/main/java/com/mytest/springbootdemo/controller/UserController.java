@@ -31,7 +31,7 @@ public class UserController {
     }
     User    user1     = JSONObject.parseObject(user, User.class);
     Boolean isSuccess = userService.add(user1);
-    if(isSuccess){
+    if (isSuccess) {
       return "add user success...";
     }
     return "add user fail...";
@@ -43,7 +43,7 @@ public class UserController {
       return "wrong params...";
     }
     Boolean isSuccess = userService.delete(userId);
-    if(isSuccess){
+    if (isSuccess) {
       return "delete user success...";
     }
     return "delete user fail...";
@@ -56,7 +56,7 @@ public class UserController {
     }
     User    user1     = JSONObject.parseObject(user, User.class);
     Boolean isSuccess = userService.update(user1);
-    if(isSuccess){
+    if (isSuccess) {
       return "update user success...";
     }
     return "update user fail...";
@@ -68,7 +68,7 @@ public class UserController {
       return "wrong params...";
     }
     User user = userService.queryById(userId);
-    if(user!=null){
+    if (user != null) {
       return user.toString();
     }
     return "no user";

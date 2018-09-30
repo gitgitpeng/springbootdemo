@@ -12,7 +12,6 @@ public interface TestService {
 
   /**
    * welcome
-   * @return
    */
   String welcome();
 }

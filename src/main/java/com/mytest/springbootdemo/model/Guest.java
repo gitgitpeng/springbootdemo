@@ -14,8 +14,9 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 @Setter
 @Getter
 public class Guest {
+
   private String name;
-  private int sex;
+  private int    sex;
   private String note;
   private String arg1;
   private String arg2;
@@ -24,7 +25,7 @@ public class Guest {
   private String arg5;
   private String arg6;
 
-  public String getArg7(){
+  public String getArg7() {
     return "1111";
   }
 
