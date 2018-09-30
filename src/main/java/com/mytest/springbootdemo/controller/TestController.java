@@ -4,9 +4,9 @@ import com.alibaba.fastjson.JSONObject;
 import com.google.gson.Gson;
 import com.mytest.springbootdemo.model.Guest;
 import com.mytest.springbootdemo.service.TestService;
-import java.util.Date;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,30 +23,28 @@ public class TestController {
   @Autowired
   private TestService testService;
 
-  @RequestMapping("/hello")
+  @GetMapping("/hello")
   public String hello(){
     return testService.welcome();
   }
 
-  @RequestMapping("/compareJson")
+  @GetMapping("/compareJson")
   public void compareJson(){
     Gson gson = new Gson();
     String json = "{\"name\":\"zhangsan\",\"sex\":0,\"note\":\"i am a man\",\"arg1\":\"aaaaaaaaaaaaaa\",\"arg2\":\"bbbbbbbbbbbbbbbbb\",\"arg3\":\"ccccccccccccccccccccc\",\"arg4\":\"dddddddddddddddddd\",\"arg5\":\"eeeeeeeeeeeeee\",\"arg6\":\"ffffffffffffffffffffffff\"}";
-    Date before = new Date();
+    long beforeTime = System.currentTimeMillis();
     Guest guest = gson.fromJson(json,Guest.class);
     String parseJson  = gson.toJson(guest);
     System.out.println(parseJson);
-    Date after = new Date();
-    System.out.println("Gson: json -> object -> json spend:"+(after.getTime() - before.getTime()));
-    before = new Date();
+    System.out.println("Gson: json -> object -> json spend:"+(System.currentTimeMillis() - beforeTime));
+    beforeTime = System.currentTimeMillis();
     Guest guest1 = JSONObject.parseObject(json,Guest.class);
     String parseJson1 = JSONObject.toJSONString(guest1);
     System.out.println(parseJson1);
-    after = new Date();
-    System.out.println("FastJson: json -> object -> json spend:"+(after.getTime() - before.getTime()));
+    System.out.println("FastJson: json -> object -> json spend:"+(System.currentTimeMillis() - beforeTime));
   }
 
-  @RequestMapping("testLog")
+  @GetMapping("testLog")
   public void testLog(){
     log.debug("debug log....");
     log.error("error log....");
