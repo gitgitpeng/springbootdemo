@@ -83,11 +83,20 @@
       <artifactId>pagehelper</artifactId>
       <version>4.1.0</version>
     </dependency>
-
     <dependency>
       <groupId>com.google.guava</groupId>
       <artifactId>guava</artifactId>
       <version>26.0-jre</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpclient</artifactId>
+      <version>4.5.5</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>fluent-hc</artifactId>
+      <version>4.5.5</version>
     </dependency>
   </dependencies>
 
@@ -125,6 +134,13 @@
           <overwrite>true</overwrite>
           <verbose>true</verbose>
         </configuration>
+        <dependencies>
+          <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.12</version>
+          </dependency>
+        </dependencies>
       </plugin>
     </plugins>
   </build>

@@ -1,8 +1,6 @@
-package com.mytest.springbootdemo.model;
+package com.mytest.springbootdemo.query;
 
-import com.alibaba.fastjson.annotation.JSONField;
 import java.io.Serializable;
-import javax.persistence.Transient;
 import lombok.Getter;
 import lombok.Setter;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
@@ -12,20 +10,15 @@ import org.apache.commons.lang3.builder.ToStringStyle;
  * TODO: detail description
  *
  * @author xie.huanpeng
- * @version $: User.java, v 0.1 2018年09月30日 11:01 xie.huanpeng Exp $
+ * @version $: PageReq.java, v 0.1 2018年10月08日 16:14 xie.huanpeng Exp $
  */
 @Setter
 @Getter
-public class User implements Serializable {
+public class PageReq implements Serializable {
 
-  @JSONField(serialize = false)
-  private Long userId;
-
-  private String userName;
-
-  private String password;
-
-  private String phone;
+  private int    pageIndex = 1;
+  private int    pageSize  = 20;
+  private String query;
 
   @Override
   public String toString() {
