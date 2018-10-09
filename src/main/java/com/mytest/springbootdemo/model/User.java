@@ -1,8 +1,6 @@
 package com.mytest.springbootdemo.model;
 
-import com.alibaba.fastjson.annotation.JSONField;
 import java.io.Serializable;
-import javax.persistence.Transient;
 import lombok.Getter;
 import lombok.Setter;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
@@ -17,9 +15,6 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 @Setter
 @Getter
 public class User implements Serializable {
-
-  @JSONField(serialize = false)
-  private Long userId;
 
   private String userName;
 

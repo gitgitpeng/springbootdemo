@@ -1,7 +1,5 @@
 package com.mytest.springbootdemo.controller;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
 import com.mytest.springbootdemo.model.User;
 import com.mytest.springbootdemo.query.PageReq;
 import com.mytest.springbootdemo.service.UserService;
@@ -26,15 +24,8 @@ public class UserController {
   @Autowired
   private UserService userService;
 
-  /**
-   * TODO 直接使用RequestBody进行序列化会使FastJson的serialize无效
-   * @param user
-   * @return
-   */
   @PostMapping("add")
   public String add(@RequestBody User user) {
-    String json = JSON.toJSONString(user);
-    User user1 = JSONObject.parseObject(json,User.class);
     Boolean isSuccess = userService.add(user);
     if (isSuccess) {
       return "add user success...";
