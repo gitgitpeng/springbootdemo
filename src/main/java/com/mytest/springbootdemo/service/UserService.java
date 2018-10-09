@@ -5,7 +5,7 @@ import com.mytest.springbootdemo.model.User;
 import com.mytest.springbootdemo.query.PageReq;
 
 /**
- * TODO: detail description
+ * 用户信息Service
  *
  * @author xie.huanpeng
  * @version $: UserService.java, v 0.1 2018年09月30日 10:55 xie.huanpeng Exp $

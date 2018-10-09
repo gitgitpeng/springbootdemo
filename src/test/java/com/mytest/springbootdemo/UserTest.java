@@ -7,7 +7,7 @@ import org.apache.http.message.BasicNameValuePair;
 import org.junit.Test;
 
 /**
- * TODO: detail description
+ * 用户信息CRUD单元测试
  *
  * @author xie.huanpeng
  * @version $: UserTest.java, v 0.1 2018年10月08日 14:31 xie.huanpeng Exp $

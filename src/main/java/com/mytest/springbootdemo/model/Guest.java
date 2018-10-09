@@ -6,7 +6,7 @@ import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * TODO: detail description
+ * 测试用 - 游客实体类
  *
  * @author xie.huanpeng
  * @version $: Guest.java, v 0.1 2018年09月28日 13:40 xie.huanpeng Exp $

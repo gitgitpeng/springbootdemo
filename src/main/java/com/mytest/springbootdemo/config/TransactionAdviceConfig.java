@@ -14,7 +14,7 @@ import org.springframework.transaction.interceptor.NameMatchTransactionAttribute
 import org.springframework.transaction.interceptor.TransactionInterceptor;
 
 /**
- * TODO: detail description
+ * 事务配置类
  *
  * @author xie.huanpeng
  * @version $: TransactionAdviceConfig.java, v 0.1 2018年09月30日 15:05 xie.huanpeng Exp $
