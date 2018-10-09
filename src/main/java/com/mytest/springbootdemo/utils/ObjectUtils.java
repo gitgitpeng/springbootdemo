@@ -11,8 +11,8 @@ import org.springframework.util.CollectionUtils;
 /**
  * 属性复制工具
  *
- * @author tangdu
- * @version $: ObjectUtils.java, v 0.1 2018年08月28日 22:30 tangdu Exp $
+ * @author xie.huanpeng
+ * @version $: ObjectUtils.java, v 0.1 2018年09月30日 11:00 xie.huanpeng Exp $
  */
 public class ObjectUtils {
 

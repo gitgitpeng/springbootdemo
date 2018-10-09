@@ -1,7 +1,5 @@
 package com.mytest.springbootdemo.service;
 
-import org.springframework.stereotype.Service;
-
 /**
  * TODO: detail description
  *
@@ -12,6 +10,7 @@ public interface TestService {
 
   /**
    * welcome
+   * @return
    */
   String welcome();
 }

@@ -1,7 +1,7 @@
 package com.mytest.springbootdemo.controller;
 
-import com.alibaba.fastjson.JSONObject;
 import com.mytest.springbootdemo.model.User;
+import com.mytest.springbootdemo.query.PageReq;
 import com.mytest.springbootdemo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
@@ -25,12 +25,8 @@ public class UserController {
   private UserService userService;
 
   @PostMapping("add")
-  public String add(@RequestBody String user) {
-    if (!StringUtils.hasLength(user)) {
-      return "wrong params...";
-    }
-    User    user1     = JSONObject.parseObject(user, User.class);
-    Boolean isSuccess = userService.add(user1);
+  public String add(@RequestBody User user) {
+    Boolean isSuccess = userService.add(user);
     if (isSuccess) {
       return "add user success...";
     }
@@ -50,12 +46,8 @@ public class UserController {
   }
 
   @PostMapping("update")
-  public String update(@RequestBody String user) {
-    if (!StringUtils.hasLength(user)) {
-      return "wrong params...";
-    }
-    User    user1     = JSONObject.parseObject(user, User.class);
-    Boolean isSuccess = userService.update(user1);
+  public String update(@RequestBody User user) {
+    Boolean isSuccess = userService.update(user);
     if (isSuccess) {
       return "update user success...";
     }
@@ -74,9 +66,9 @@ public class UserController {
     return "no user";
   }
 
-  @RequestMapping("queryList")
-  public String queryList() {
-    return userService.queryList().toString();
+  @PostMapping("queryList")
+  public String queryList(@RequestBody PageReq pageReq) {
+    return userService.queryList(pageReq).toString();
   }
 
 }

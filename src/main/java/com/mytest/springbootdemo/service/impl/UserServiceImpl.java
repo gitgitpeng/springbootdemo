@@ -1,14 +1,12 @@
 package com.mytest.springbootdemo.service.impl;
 
-import com.google.common.collect.Lists;
-
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.mytest.springbootdemo.common.PageData;
 import com.mytest.springbootdemo.mapper.UserMapper;
 import com.mytest.springbootdemo.model.User;
+import com.mytest.springbootdemo.query.PageReq;
 import com.mytest.springbootdemo.service.UserService;
-import com.mytest.springbootdemo.utils.ObjectUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -57,8 +55,8 @@ public class UserServiceImpl implements UserService {
   }
 
   @Override
-  public PageData<User> queryList() {
-    PageHelper.startPage(2, 10);
+  public PageData<User> queryList(PageReq pageReq) {
+    PageHelper.startPage(pageReq.getPageIndex(), pageReq.getPageSize());
     Page<User>     page     = userMapper.queryList();
     PageData<User> pageData = new PageData<>();
     pageData.setPageSize(page.getPageSize());

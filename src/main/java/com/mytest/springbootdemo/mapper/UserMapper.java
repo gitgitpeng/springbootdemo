@@ -2,7 +2,6 @@ package com.mytest.springbootdemo.mapper;
 
 import com.github.pagehelper.Page;
 import com.mytest.springbootdemo.model.User;
-import org.springframework.stereotype.Component;
 
 /**
  * TODO: detail description
