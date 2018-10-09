@@ -7,7 +7,7 @@ import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * TODO: detail description
+ * 用户信息实体类
  *
  * @author xie.huanpeng
  * @version $: User.java, v 0.1 2018年09月30日 11:01 xie.huanpeng Exp $
@@ -15,6 +15,8 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 @Setter
 @Getter
 public class User implements Serializable {
+
+  private Long userId;
 
   private String userName;
 

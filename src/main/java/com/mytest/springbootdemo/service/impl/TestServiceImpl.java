@@ -4,7 +4,7 @@ import com.mytest.springbootdemo.service.TestService;
 import org.springframework.stereotype.Service;
 
 /**
- * TODO: detail description
+ * 测试Service实现类
  *
  * @author xie.huanpeng
  * @version $: TestServiceImpl.java, v 0.1 2018年09月30日 11:03 xie.huanpeng Exp $

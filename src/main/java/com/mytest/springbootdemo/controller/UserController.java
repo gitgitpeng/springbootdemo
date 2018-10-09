@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * TODO: detail description
+ * 用户信息Controller
  *
  * @author xie.huanpeng
  * @version $: UserController.java, v 0.1 2018年09月30日 10:53 xie.huanpeng Exp $

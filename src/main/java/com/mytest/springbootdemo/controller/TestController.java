@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * TODO: detail description
+ * 测试
  *
  * @author xie.huanpeng
  * @version $: TestController.java, v 0.1 2018年09月28日 11:31 xie.huanpeng Exp $

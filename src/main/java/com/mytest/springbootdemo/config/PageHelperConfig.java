@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * TODO: detail description
+ * PageHelper配置类
  *
  * @author xie.huanpeng
  * @version $: PageHelperConfig.java, v 0.1 2018年09月30日 14:23 xie.huanpeng Exp $

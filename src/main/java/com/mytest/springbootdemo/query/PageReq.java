@@ -7,7 +7,7 @@ import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * TODO: detail description
+ * 分页请求参数
  *
  * @author xie.huanpeng
  * @version $: PageReq.java, v 0.1 2018年10月08日 16:14 xie.huanpeng Exp $
@@ -17,7 +17,12 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 public class PageReq implements Serializable {
 
   private int    pageIndex = 1;
+
   private int    pageSize  = 20;
+
+  /**
+   * 查询条件，json字符串
+   */
   private String query;
 
   @Override

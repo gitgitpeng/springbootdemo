@@ -10,7 +10,7 @@ import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
- * TODO: detail description
+ * FastJson配置类
  *
  * @author xie.huanpeng
  * @version $: FastJsonCustomConfig.java, v 0.1 2018年10月08日 16:35 xie.huanpeng Exp $

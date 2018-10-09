@@ -11,7 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
- * TODO: detail description
+ * 用户信息Service实现类
  *
  * @author xie.huanpeng
  * @version $: UserServiceImpl.java, v 0.1 2018年09月30日 11:03 xie.huanpeng Exp $

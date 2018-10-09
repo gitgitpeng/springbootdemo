@@ -4,7 +4,7 @@ import com.github.pagehelper.Page;
 import com.mytest.springbootdemo.model.User;
 
 /**
- * TODO: detail description
+ * 用户信息Mapper
  *
  * @author xie.huanpeng
  * @version $: UserMapper.java, v 0.1 2018年09月30日 11:01 xie.huanpeng Exp $
